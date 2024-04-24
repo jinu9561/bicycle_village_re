@@ -168,8 +168,8 @@
         <div class="row">
           <div class="col-md-6 mb-5 mb-md-0">
           	<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-			<input type="hidden" name="key" value = "user" /> <!-- Controller를 찾는 정보 -->
-			<input type="hidden" name="methodName" value = "login" />  <!-- 메소드이름 -->
+			<input type="hidden" name="key" value = "user" /> 
+			<input type="hidden" name="methodName" value = "login" />  
           
             <h2 class="h3 mb-3 text-black">로그인</h2>
             <div class="p-3 p-lg-5 border">

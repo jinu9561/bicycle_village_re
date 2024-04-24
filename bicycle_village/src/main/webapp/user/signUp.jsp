@@ -204,8 +204,8 @@
 <c:choose>
 <c:when test="${empty loginUser || UserStatus!=0}">
 	<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-			<input type="hidden" name="key" value = "user" /> <!-- Controller를 찾는 정보 -->
-			<input type="hidden" name="methodName" value = "signUp" />  <!-- 메소드이름 -->
+			<input type="hidden" name="key" value = "user" /> 
+			<input type="hidden" name="methodName" value = "signUp" /> 
 
     <div class="bg-light py-3">
       <div class="container">

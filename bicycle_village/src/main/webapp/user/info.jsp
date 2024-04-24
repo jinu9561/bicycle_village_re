@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%-- <jsp:include page="../common/header.jsp"/>
 
 <c:choose>
@@ -206,12 +206,11 @@
         </div>
       </nav>
     </header>
-
 <c:choose>
-<c:when test="${not empty loginUser && UserStatus ==0}">
-	<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-			<input type="hidden" name="key" value = "user" /> <!-- Controller를 찾는 정보 -->
-			<input type="hidden" name="methodName" value = "signUp" />  <!-- 메소드이름 -->
+  <c:when test="${not empty loginUser && UserStatus ==0}">
+  <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
+		<input type="hidden" name="key" value = "user" > 
+		<input type="hidden" name="methodName" value = "info" > 
 
     <div class="bg-light py-3">
       <div class="container">
@@ -223,13 +222,7 @@
 
     <div class="site-section">
       <div class="container">
-        <!-- <div class="row mb-5">
-          <div class="col-md-12">
-            <div class="border p-4 rounded" role="alert">
-              Returning customer? <a href="#">Click here</a> to login
-            </div>
-          </div>
-        </div> -->
+        
         <div class="row">
           <div class="col-md-6 mb-5 mb-md-0">
             <h2 class="h3 mb-3 text-black">나의 정보 수정</h2>
@@ -309,15 +302,16 @@
 
           </div>
         </div>
-        <!-- </form> -->
+     
       </div>
     </div>
 
 </form>
-</c:when>
-<c:otherwise>
-
-</c:otherwise>
+  
+  </c:when>
+  <c:otherwise>
+    <h2>ddd</h2>
+  </c:otherwise>
 </c:choose>
 
     <footer class="site-footer border-top">
