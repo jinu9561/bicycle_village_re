@@ -122,50 +122,50 @@
               
               <div class="form-group row">
                 <div class="col-md-6">
-                	<label for="c_fname" class="text-black">아이디 <span class="text-danger">*</span></label>
+                	<label for="userId" class="text-black">아이디 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="userId" name="userId">
                 </div>
               </div>
               
               <div class="form-group row">
                 <div class="col-md-6">
-                  <label for="c_fname" class="text-black">비밀번호 <span class="text-danger">*</span></label>
+                  <label for="pwd" class="text-black">비밀번호 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="pwd" name="pwd">
                 </div>
                 <div class="col-md-6">
-                  <label for="c_lname" class="text-black">비밀번호 재확인 <span class="text-danger">*</span></label>
+                  <label for="pwd2" class="text-black">비밀번호 재확인 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="pwd2" name="pwd2">
                 </div>
               </div>
               
               <div class="form-group row">
                 <div class="col-md-6">
-                  <label for="c_fname" class="text-black">이름 <span class="text-danger">*</span></label>
+                  <label for="name" class="text-black">이름 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="col-md-6">
-                  <label for="c_lname" class="text-black">닉네임 <span class="text-danger">*</span></label>
+                  <label for="name2" class="text-black">닉네임 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="name2" name="name2">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black">전화번호 <span class="text-danger">*</span></label>
+                  <label for="tel" class="text-black">전화번호 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="tel" name="tel">
                 </div>
               </div>
               
               <div class="form-group row">
                 <div class="col-md-12">
-                <label for="c_address" class="text-black">생년월일 <span class="text-danger">*</span></label>
+                <label for="birth" class="text-black">생년월일 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="birth" name="birth" placeholder="YYYY.MM.DD">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_email_address" class="text-black">이메일 </label>
+                  <label for="email" class="text-black">이메일 </label>
                   <input type="text" class="form-control" id="email" name="email">
                 </div>
               </div>

@@ -51,12 +51,12 @@
 	
 	     				<li><a>${loginName}님 로그인 중</a>
 	      				<li><a href="${pageContext.request.contextPath}/front?key=user&methodName=logout" class="btn">Logout</a></li>
-	     				<li><a href="../bicycle_village/user/myPage.jsp"><span class="icon icon-person"></span></a></li>
+	     				<li><a href="user/myPage.jsp"><span class="icon icon-person"></span></a></li>
                   		<li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                   <li>
     			 </c:when>
     			 <c:otherwise>
-                  <li><a href="../bicycle_village/user/login.jsp"><span class="icon icon-person"></span></a></li>
+                  <li><a href="user/login.jsp"><span class="icon icon-person"></span></a></li>
                   <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                   </c:otherwise>
                   </c:choose>  

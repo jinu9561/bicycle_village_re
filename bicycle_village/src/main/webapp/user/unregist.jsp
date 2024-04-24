@@ -98,44 +98,40 @@
       </nav>
     </header>
 
-<c:choose>
-	
-    <div class="bg-light py-3">
-      <div class="container">
-      
-        <div class="row">
-          <div class="col-md-12 mb-0"><a href="home.jsp">Home</a> <span class="mx-2 mb-0">/</span> <a href="myPage.jsp">마이페이지</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">회원 탈퇴</strong></div>
-        </div>
-      </div>
-    </div>
-	<c:when test="${not empty loginUser && UserStatus==0}">
-    <div class="site-section">
-      <div class="container">
-     
-      <div class="row mb-5">
-          <div class="col-md-12">
-            <div class="border p-4 rounded" role="alert">
+	<div class="bg-light py-3">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-12 mb-0"><a href="home.jsp">Home</a> <span class="mx-2 mb-0">/</span> <a href="myPage.jsp">마이페이지</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">회원 탈퇴</strong></div>
+		<c:choose>
+			<c:when test="${not empty loginUser && UserStatus==0}">
+				<div class="site-section">
+				<div class="container">
+					<div class="row mb-5">
+          			<div class="col-md-12">
+           			 <div class="border p-4 rounded" role="alert">
               	
-		      <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-				<input type="hidden" name="key" value = "user" />
-				<input type="hidden" name="methodName" value = "unregist" />
-				${loginName}님 정말로 탈퇴하시겠습니까?
-				
-				<button type="submit" class="btn btn-primary btn-sm btn-block">회원 탈퇴</button>
-			</form>
+					      <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
+							<input type="hidden" name="key" value = "user" />
+							<input type="hidden" name="methodName" value = "unregist" />
+							${loginName}님 정말로 탈퇴하시겠습니까?
+							
+							<button type="submit" class="btn btn-primary btn-sm btn-block">회원 탈퇴</button>
+						</form>
 			
             </div>
           </div>
         </div>
-        </div>
-        </div>
-  
-    </c:when>
-    
-    <c:otherwise>
-    	ddd
-    </c:otherwise>
-  </c:choose>
+				</div>
+				</div>
+			</c:when>
+			
+		<c:otherwise>
+			ddd
+		</c:otherwise>
+		</c:choose>
+	</div>
+	</div>
+	</div>
 
     <footer class="site-footer border-top">
       <div class="container">
