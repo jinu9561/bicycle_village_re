@@ -5,12 +5,13 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 import group2.bicycle_village.controller.Controller;
+import group2.bicycle_village.controller.RestController;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 
-/*@WebListener
+@WebListener
 public class HandlerMappingListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
@@ -37,8 +38,9 @@ public class HandlerMappingListener implements ServletContextListener {
         application.setAttribute("restClzMap", clzMap);
 
 
-    }*/
+    }
 
+/*
 @WebListener
 public class HandlerMappingListener implements ServletContextListener {
 	//was구동.png 그림에서 봤을 때 4)Listener로딩과 5)Servlet생성 사이에
@@ -83,4 +85,6 @@ public class HandlerMappingListener implements ServletContextListener {
     	
     	
     }//methodEnd
+
+ */
 }
