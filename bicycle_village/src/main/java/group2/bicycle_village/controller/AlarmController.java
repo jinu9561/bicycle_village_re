@@ -14,13 +14,14 @@ public class AlarmController implements RestController {
 
     public void insert(HttpServletRequest request, HttpServletResponse response) throws Exception {
         HttpSession session = request.getSession();
-        String id = (String)session.getAttribute("id");
-        String board = (String)session.getAttribute("board");
+        String id = (String)session.getAttribute("loginId");
+//        String board = (String)session.getAttribute("board");
 
+        String board = "insert";
         int result = 0;
         if(board != null) {
             try {
-                result = alarmService.insert(id, new AlarmDTO("board insert", 0));
+                result = alarmService.insert(id, new AlarmDTO("board insert", 0, "alarm.jsp"));
             } catch (Exception e) {
                 e.printStackTrace();
             }

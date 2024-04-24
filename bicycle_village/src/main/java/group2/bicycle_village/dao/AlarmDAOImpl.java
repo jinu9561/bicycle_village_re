@@ -15,6 +15,7 @@ public class AlarmDAOImpl implements AlarmDAO {
         int result = 0;
         String sql = "insert into alarm values(alarm_seq.nextval, (select user_seq from member where user_id = ?), ?, ?, ?)";
 
+        System.out.println(id);
         try {
             con = DbUtil.getConnection();
             ps = con.prepareStatement(sql);
