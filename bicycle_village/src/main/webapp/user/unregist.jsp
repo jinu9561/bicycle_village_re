@@ -1,29 +1,5 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<jsp:include page="../common/header.jsp"/>
-
-<c:choose>
-	<c:when test="${empty loginUser}">
-		<h4>로그인하고 이용해주세요!</h4>
-	</c:when>
-	
-	<c:otherwise>
-	<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-		<input type="hidden" name="key" value = "user" />
-		<input type="hidden" name="methodName" value = "unregist" />
-		<h4>${loginName}님 정말로 탈퇴하시겠습니까?</h4>
-		
-		<button type="submit" class="btn btn-primary">회원 탈퇴</button>
-	</form>
-	</c:otherwise>
-</c:choose>
-
-<jsp:include page="../common/footer.jsp"/> --%>
-
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -143,9 +119,9 @@
 		      <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
 				<input type="hidden" name="key" value = "user" />
 				<input type="hidden" name="methodName" value = "unregist" />
-				<h4>${loginName}님 정말로 탈퇴하시겠습니까?</h4>
+				${loginName}님 정말로 탈퇴하시겠습니까?
 				
-				<button type="submit" class="btn btn-primary">회원 탈퇴</button>
+				<button type="submit" class="btn btn-primary btn-sm btn-block">회원 탈퇴</button>
 			</form>
 			
             </div>
@@ -157,7 +133,7 @@
     </c:when>
     
     <c:otherwise>
-    	<h4>로그인하고 이용해주세요!</h4>
+    	ddd
     </c:otherwise>
   </c:choose>
 
@@ -197,8 +173,7 @@
             <h3 class="footer-heading mb-4">Promo</h3>
             <a href="#" class="block-6">
               <img src="images/hero_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
-              <h3 class="font-weight-light  mb-0">Finding Your Perfect Shoes</h3>
-              <p>Promo from  nuary 15 &mdash; 25, 2019</p>
+       
             </a>
           </div>
           <div class="col-md-6 col-lg-3">
