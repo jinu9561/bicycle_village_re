@@ -133,11 +133,11 @@
              
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black"> 아이디 </label>
+                  <label for="userId" class="text-black"> 아이디 </label>
                   <input type="text" class="form-control" id="userId" name="userId">
                 </div>
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black"> 비밀번호 </label>
+                  <label for="pwd" class="text-black"> 비밀번호 </label>
                   <input type="text" class="form-control" id="pwd" name="pwd">
                 </div>
               </div>

@@ -123,7 +123,7 @@
               
               <div class="form-group row">
                 <div class="col-md-6">
-                	<label for="c_fname" class="text-black">아이디 </label>
+                	<label for="userId" class="text-black">아이디 </label>
                   <input type="text" class="form-control" id="userId" name="userId"
                   value="${loginId}" readonly="readonly">
                 </div>
@@ -131,23 +131,23 @@
               
               <div class="form-group row">
                 <div class="col-md-6">
-                  <label for="c_fname" class="text-black">비밀번호 <span class="text-danger">*</span></label>
+                  <label for="pwd" class="text-black">비밀번호 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="pwd" name="pwd">
                 </div>
                 <div class="col-md-6">
-                  <label for="c_lname" class="text-black">비밀번호 재확인 <span class="text-danger">*</span></label>
+                  <label for="pwd2" class="text-black">비밀번호 재확인 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="pwd2" name="pwd2">
                 </div>
               </div>
               
               <div class="form-group row">
                 <div class="col-md-6">
-                  <label for="c_fname" class="text-black">이름 </label>
+                  <label for="name" class="text-black">이름 </label>
                   <input type="text" class="form-control" id="name" name="name"
                   value="${loginName}" readonly="readonly">
                 </div>
                 <div class="col-md-6">
-                  <label for="c_lname" class="text-black">닉네임 <span class="text-danger">*</span></label>
+                  <label for="name2" class="text-black">닉네임 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="name2" name="name2"
                   value="${nickName}">
                 </div>
@@ -155,21 +155,21 @@
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black">전화번호 <span class="text-danger">*</span></label>
+                  <label for="tel" class="text-black">전화번호 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="tel" name="tel" value="${loginTel}">
                 </div>
               </div>
               
               <div class="form-group row">
                 <div class="col-md-12">
-                <label for="c_address" class="text-black">생년월일 </label>
+                <label for="birth" class="text-black">생년월일 </label>
                   <input type="text" class="form-control" id="birth" name="birth" value="${loginBirth}" readonly="readonly">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_email_address" class="text-black">이메일 </label>
+                  <label for="email" class="text-black">이메일 </label>
                   <input type="text" class="form-control" id="email" name="email" value="${loginEmail}">
                 </div>
               </div>
