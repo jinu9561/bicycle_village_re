@@ -10,7 +10,7 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
-
+/*
 @WebListener
 public class HandlerMappingListener implements ServletContextListener {
     @Override
@@ -39,8 +39,8 @@ public class HandlerMappingListener implements ServletContextListener {
 
 
     }
+*/
 
-/*
 @WebListener
 public class HandlerMappingListener implements ServletContextListener {
 	//was구동.png 그림에서 봤을 때 4)Listener로딩과 5)Servlet생성 사이에
@@ -85,6 +85,4 @@ public class HandlerMappingListener implements ServletContextListener {
     	
     	
     }//methodEnd
-
- */
 }
