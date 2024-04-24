@@ -1,7 +1,5 @@
 package group2.bicycle_village.common.util;
 
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
