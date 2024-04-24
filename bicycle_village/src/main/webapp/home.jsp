@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,10 +46,23 @@
 
             <div class="col-6 col-md-4 order-3 order-md-3 text-right">
               <div class="site-top-icons">
-                <ul>   
+                <ul>
+                <c:choose> 
+                <c:when test="${not empty loginUser && UserStatus ==0}">
+	
+	     				<li><a>${loginName}님 로그인 중</a>
+	      				<li><a href="${pageContext.request.contextPath}/front?key=user&methodName=logout" class="btn">Logout</a></li>
+	     				<li><a href="../bicycle_village/user/myPage.jsp"><span class="icon icon-person"></span></a></li>
+                  		<li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                  <li>
+    			 </c:when>
+    			 <c:otherwise>
                   <li><a href="../bicycle_village/user/login.jsp"><span class="icon icon-person"></span></a></li>
                   <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                  </c:otherwise>
+                  </c:choose>  
                   <li>
+                  
                     <a href="cart.html" class="site-cart">
                       <span class="icon icon-shopping_cart"></span>
                       <span class="count">2</span>

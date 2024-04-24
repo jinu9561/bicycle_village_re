@@ -6,8 +6,8 @@
 <c:choose>
 	<c:when test="${empty loginUser || UserStatus!=0}">
 		<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-			<input type="hidden" name="key" value = "user" /> <!-- Controller를 찾는 정보 -->
-			<input type="hidden" name="methodName" value = "changeStatus" />  <!-- 메소드이름 -->
+			<input type="hidden" name="key" value = "user" /> 
+			<input type="hidden" name="methodName" value = "changeStatus" />  
 			<fieldset>
 				<legend>기존 정보 조회</legend>
 				

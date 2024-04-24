@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import group2.bicycle_village.common.constant.CommonCode;
+import group2.bicycle_village.common.dto.BoardEntity;
 import group2.bicycle_village.common.dto.UserDTO;
 import group2.bicycle_village.common.util.DbUtil;
 
@@ -15,6 +17,7 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public UserDTO loginCheck(UserDTO userDTO) throws SQLException {
+		//BoardEntity entity = new BoardEntity.Builder().addr("").category(CommonCode.BoardCategory.getStatus(0)).build();
 		Connection con=null;
 		PreparedStatement ps=null;
 		ResultSet rs=null;
