@@ -1,29 +1,5 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<jsp:include page="../common/header.jsp"/>
-
-<c:choose>
-	<c:when test="${empty loginUser}">
-		<h4>로그인하고 이용해주세요!</h4>
-	</c:when>
-	
-	<c:otherwise>
-	<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-		<input type="hidden" name="key" value = "user" />
-		<input type="hidden" name="methodName" value = "unregist" />
-		<h4>${loginName}님 정말로 탈퇴하시겠습니까?</h4>
-		
-		<button type="submit" class="btn btn-primary">회원 탈퇴</button>
-	</form>
-	</c:otherwise>
-</c:choose>
-
-<jsp:include page="../common/footer.jsp"/> --%>
-
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -122,44 +98,40 @@
       </nav>
     </header>
 
-<c:choose>
-	
-    <div class="bg-light py-3">
-      <div class="container">
-      
-        <div class="row">
-          <div class="col-md-12 mb-0"><a href="home.jsp">Home</a> <span class="mx-2 mb-0">/</span> <a href="myPage.jsp">마이페이지</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">회원 탈퇴</strong></div>
-        </div>
-      </div>
-    </div>
-	<c:when test="${not empty loginUser && UserStatus==0}">
-    <div class="site-section">
-      <div class="container">
-     
-      <div class="row mb-5">
-          <div class="col-md-12">
-            <div class="border p-4 rounded" role="alert">
+	<div class="bg-light py-3">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-12 mb-0"><a href="home.jsp">Home</a> <span class="mx-2 mb-0">/</span> <a href="myPage.jsp">마이페이지</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">회원 탈퇴</strong></div>
+		<c:choose>
+			<c:when test="${not empty loginUser && UserStatus==0}">
+				<div class="site-section">
+				<div class="container">
+					<div class="row mb-5">
+          			<div class="col-md-12">
+           			 <div class="border p-4 rounded" role="alert">
               	
-		      <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-				<input type="hidden" name="key" value = "user" />
-				<input type="hidden" name="methodName" value = "unregist" />
-				<h4>${loginName}님 정말로 탈퇴하시겠습니까?</h4>
-				
-				<button type="submit" class="btn btn-primary">회원 탈퇴</button>
-			</form>
+					      <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
+							<input type="hidden" name="key" value = "user" />
+							<input type="hidden" name="methodName" value = "unregist" />
+							${loginName}님 정말로 탈퇴하시겠습니까?
+							
+							<button type="submit" class="btn btn-primary btn-sm btn-block">회원 탈퇴</button>
+						</form>
 			
             </div>
           </div>
         </div>
-        </div>
-        </div>
-  
-    </c:when>
-    
-    <c:otherwise>
-    	<h4>로그인하고 이용해주세요!</h4>
-    </c:otherwise>
-  </c:choose>
+				</div>
+				</div>
+			</c:when>
+			
+		<c:otherwise>
+			ddd
+		</c:otherwise>
+		</c:choose>
+	</div>
+	</div>
+	</div>
 
     <footer class="site-footer border-top">
       <div class="container">
@@ -197,8 +169,7 @@
             <h3 class="footer-heading mb-4">Promo</h3>
             <a href="#" class="block-6">
               <img src="images/hero_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
-              <h3 class="font-weight-light  mb-0">Finding Your Perfect Shoes</h3>
-              <p>Promo from  nuary 15 &mdash; 25, 2019</p>
+       
             </a>
           </div>
           <div class="col-md-6 col-lg-3">

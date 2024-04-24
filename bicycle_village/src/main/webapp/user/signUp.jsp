@@ -1,108 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- <jsp:include page="../common/header.jsp"/>
-
-<c:choose>
-	<c:when test="${empty loginUser || UserStatus !=0}">
-		<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-			<input type="hidden" name="key" value = "user" /> <!-- Controller를 찾는 정보 -->
-			<input type="hidden" name="methodName" value = "signUp" />  <!-- 메소드이름 -->
-			<fieldset>
-				<legend>회원가입</legend>
-				
-				<div class="form-group">
-					<label for="userId" class="col-lg-2 control-label">아이디</label>
-					<div class="col-lg-10">
-						<input type="text" class="form-control" id="userId" name="userId">
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label for="pwd" class="col-lg-2 control-label">비밀번호</label>
-					<div class="col-lg-10">
-						<input type="password" class="form-control" id="pwd" name="pwd">
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label for="checkPw" class="col-lg-2 control-label">비밀번호 재확인</label>
-					<div class="col-lg-10">
-						<input type="password" class="form-control" id="pwd2" name="pwd2"> 
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label for="name" class="col-lg-2 control-label">이름</label>
-					<div class="col-lg-10">
-						<input type="text" class="form-control" id="name" name="name"> 
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label for="name2" class="col-lg-2 control-label">닉네임</label>
-					<div class="col-lg-10">
-						<input type="text" class="form-control" id="name2" name="name2"> 
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label for="tel" class="col-lg-2 control-label">전화번호</label>
-					<div class="col-lg-10">
-						<input type="text" class="form-control" id="tel" name="tel"> 
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label for="birth" class="col-lg-2 control-label">생년월일</label>
-					<div class="col-lg-10">
-						<input type="text" class="form-control" id="birth" name="birth"
-						placeholder="YYYY.MM.DD"> 
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label for="email" class="col-lg-2 control-label">이메일 (선택)</label>
-					<div class="col-lg-10">
-						<input type="email" class="form-control" id="email" name="email"> 
-					</div>
-				</div>
-				
-				<div>
-					<div>
-						<input type="radio" id="gender" name="gender" value="woman">
-						<label>여</label>
-					</div>
-				</div>
-					
-				<div>
-					<div>
-						<input type="radio" id="gender" name="gender" value="man">
-						<label>남</label>
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<div class="col-lg-10 col-lg-offset-2">
-						<button type="submit" class="btn btn-primary">회원가입</button>
-					</div>
-				</div>
-				
-				
-			</fieldset>
-		</form>
-	</c:when>
-	
-	<c:otherwise>
-		<div class="alert alert-dismissible alert-warning">
-			<h4>${loginName}님 반갑습니다!</h4>
-		</div>
-	</c:otherwise>
-</c:choose>
-
-<jsp:include page="../common/footer.jsp"/>
-
- --%>
  <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -217,13 +115,6 @@
 
     <div class="site-section">
       <div class="container">
-        <!-- <div class="row mb-5">
-          <div class="col-md-12">
-            <div class="border p-4 rounded" role="alert">
-              Returning customer? <a href="#">Click here</a> to login
-            </div>
-          </div>
-        </div> -->
         <div class="row">
           <div class="col-md-6 mb-5 mb-md-0">
             <h2 class="h3 mb-3 text-black">회원가입</h2>
@@ -231,50 +122,50 @@
               
               <div class="form-group row">
                 <div class="col-md-6">
-                	<label for="c_fname" class="text-black">아이디 <span class="text-danger">*</span></label>
+                	<label for="userId" class="text-black">아이디 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="userId" name="userId">
                 </div>
               </div>
               
               <div class="form-group row">
                 <div class="col-md-6">
-                  <label for="c_fname" class="text-black">비밀번호 <span class="text-danger">*</span></label>
+                  <label for="pwd" class="text-black">비밀번호 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="pwd" name="pwd">
                 </div>
                 <div class="col-md-6">
-                  <label for="c_lname" class="text-black">비밀번호 재확인 <span class="text-danger">*</span></label>
+                  <label for="pwd2" class="text-black">비밀번호 재확인 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="pwd2" name="pwd2">
                 </div>
               </div>
               
               <div class="form-group row">
                 <div class="col-md-6">
-                  <label for="c_fname" class="text-black">이름 <span class="text-danger">*</span></label>
+                  <label for="name" class="text-black">이름 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="col-md-6">
-                  <label for="c_lname" class="text-black">닉네임 <span class="text-danger">*</span></label>
+                  <label for="name2" class="text-black">닉네임 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="name2" name="name2">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black">전화번호 <span class="text-danger">*</span></label>
+                  <label for="tel" class="text-black">전화번호 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="tel" name="tel">
                 </div>
               </div>
               
               <div class="form-group row">
                 <div class="col-md-12">
-                <label for="c_address" class="text-black">생년월일 <span class="text-danger">*</span></label>
+                <label for="birth" class="text-black">생년월일 <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="birth" name="birth" placeholder="YYYY.MM.DD">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_email_address" class="text-black">이메일 </label>
+                  <label for="email" class="text-black">이메일 </label>
                   <input type="text" class="form-control" id="email" name="email">
                 </div>
               </div>
@@ -296,95 +187,7 @@
 
             </div>
           </div>
-          <div class="col-md-6">
-
-            <!-- <div class="row mb-5">
-              <div class="col-md-12">
-                <h2 class="h3 mb-3 text-black">Coupon Code</h2>
-                <div class="p-3 p-lg-5 border">
-                  
-                  <label for="c_code" class="text-black mb-3">Enter your coupon code if you have one</label>
-                  <div class="input-group w-75">
-                    <input type="text" class="form-control" id="c_code" placeholder="Coupon Code" aria-label="Coupon Code" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary btn-sm" type="button" id="button-addon2">Apply</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div> -->
-            
-            <!-- <div class="row mb-5">
-              <div class="col-md-12">
-                <h2 class="h3 mb-3 text-black">Your Order</h2>
-                <div class="p-3 p-lg-5 border">
-                  <table class="table site-block-order-table mb-5">
-                    <thead>
-                      <th>Product</th>
-                      <th>Total</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Top Up T-Shirt <strong class="mx-2">x</strong> 1</td>
-                        <td>$250.00</td>
-                      </tr>
-                      <tr>
-                        <td>Polo Shirt <strong class="mx-2">x</strong>   1</td>
-                        <td>$100.00</td>
-                      </tr>
-                      <tr>
-                        <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-                        <td class="text-black">$350.00</td>
-                      </tr>
-                      <tr>
-                        <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong>$350.00</strong></td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <div class="border p-3 mb-3">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsebank" role="button" aria-expanded="false" aria-controls="collapsebank">Direct Bank Transfer</a></h3>
-
-                    <div class="collapse" id="collapsebank">
-                      <div class="py-2">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="border p-3 mb-3">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsecheque" role="button" aria-expanded="false" aria-controls="collapsecheque">Cheque Payment</a></h3>
-
-                    <div class="collapse" id="collapsecheque">
-                      <div class="py-2">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="border p-3 mb-5">
-                    <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse" href="#collapsepaypal" role="button" aria-expanded="false" aria-controls="collapsepaypal">Paypal</a></h3>
-
-                    <div class="collapse" id="collapsepaypal">
-                      <div class="py-2">
-                        <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='thankyou.html'">Place Order</button>
-                  </div>
-
-                </div>
-              </div>
-            </div> -->
-
-          </div>
         </div>
-        <!-- </form> -->
       </div>
     </div>
 

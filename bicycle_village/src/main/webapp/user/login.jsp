@@ -1,46 +1,3 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> --%>
-<%-- <jsp:include page="../common/header.jsp"/> --%>
-
-<%-- <c:choose>
-	<c:when test="${empty loginUser || UserStatus!=0}">
-		<form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-			<input type="hidden" name="key" value = "user" /> <!-- Controller를 찾는 정보 -->
-			<input type="hidden" name="methodName" value = "login" />  <!-- 메소드이름 -->
-			<fieldset>
-				<label>로그인</label>
-				<div class="Form">
-					<div class="form-group">
-						<label for="userId" class="col-lg-2 control-label">아이디</label>
-						<div class="col-lg-10">
-							<input type="text" class="form-control" id="userId" name="userId">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="pwd" class="col-lg-2 control-label">비밀번호</label>
-						<div class="col-lg-10">
-							<input type="password" class="form-control" id="pwd" name="pwd">
-						</div>
-					</div>
-					<div class="Input">
-						<button type="submit" class="btn btn-primary">로그인</button>
-					</div>
-				</div>
-			</fieldset>
-		</form>
-	</c:when>
-	<c:otherwise>
-		<div class="alert alert-dismissible alert-warning">
-			<h4>${loginName}님 반갑습니다!</h4>
-		</div>
-	</c:otherwise>
-</c:choose> --%>
-
-<%-- <jsp:include page="../common/footer.jsp"/> --%>
-
-<!-- ///////////////////////////////////////////////////////////////////////// -->
-<!-- checkout.html 복붙 -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -149,7 +106,7 @@
       <div class="container">
       
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <!-- <a href="cart.html">Cart</a> <span class="mx-2 mb-0">/</span> --> <strong class="text-black">로그인</strong></div>
+          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">로그인</strong></div>
         </div>
       </div>
     </div>
@@ -176,11 +133,11 @@
              
               <div class="form-group row">
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black"> 아이디 </label>
+                  <label for="userId" class="text-black"> 아이디 </label>
                   <input type="text" class="form-control" id="userId" name="userId">
                 </div>
                 <div class="col-md-12">
-                  <label for="c_companyname" class="text-black"> 비밀번호 </label>
+                  <label for="pwd" class="text-black"> 비밀번호 </label>
                   <input type="text" class="form-control" id="pwd" name="pwd">
                 </div>
               </div>
@@ -190,53 +147,11 @@
             </div>
             </form>
           </div>
-          <!-- 로그인  -->
-          
-          <div class="row mb-5">
-          <%-- <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-    	<input type="hidden" name="key" value = "user" /> <!-- Controller를 찾는 정보 -->
-		<input type="hidden" name="methodName" value = "signUp" />  <!-- 메소드이름 -->
-               --%>
-               <!-- <div class="col-md-12">
-                <h2 class="h3 mb-3 text-black">회원가입</h2>
-                <div class="p-3 p-lg-5 border">
-                  
-                  <label for="c_code" class="text-black mb-3">계정이 없다면?</label>
-                  <div class="input-group w-75">
-                    
-                    <div class="input-group-append">
-                      <button class="btn btn-primary btn-sm" type="button" id="button-addon2" onclick="location.href='signUp.jsp'">회원가입</button>
-                    </div>
-                  </div>
-
-                </div>
-              </div> -->
-              </form>
-            </div>
  
         </div>
         </div>
         </div>
         
-        <!-- </form> -->
-     
-    <%-- <form class="form-horizontal" method="post" action="${pageContext.request.contextPath}/front">
-    	<input type="hidden" name="key" value = "user" /> <!-- Controller를 찾는 정보 -->
-		<input type="hidden" name="methodName" value = "login" />  <!-- 메소드이름 -->
-		<div class="row">
-		<div class="col-md-6 mb-5 mb-md-0">
-		<div class="p-3 p-lg-5 border">
-			 <div class="form-group row">
-		    	<div class="col-md-12">
-		        	<label for="c_companyname" class="text-black">계정이 없다면?</label>
-		        	<button type="submit" class="btn btn-primary">회원가입하기</button>
-		        </div>
-	        </div>
-	    </div>
-        </div>
-        </div>
-    </form> --%>
-    
     </c:when>
     
     <c:otherwise>
