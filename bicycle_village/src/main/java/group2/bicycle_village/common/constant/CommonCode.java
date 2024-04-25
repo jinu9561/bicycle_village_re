@@ -52,4 +52,29 @@ public class CommonCode {
         }
 
     }
+    
+    public enum UserStatus{
+    	AVAILABLE(0), //정상 회원
+    	DROP(2); //탈퇴 회원
+    	
+    	private final int value;
+    	
+    	UserStatus(int value){
+    		this.value = value;
+    	}
+    	
+    	public int getValue() {
+    		return value;
+    	}
+    	
+    	public static UserStatus getStatus(int value) {
+    		for(UserStatus userStatus : UserStatus.values()) {
+    			if(userStatus.value == value) {
+    				return userStatus;
+    			}
+    		}
+    		
+    		throw new IllegalArgumentException("No matching UserStatus for value : "+value);
+    	}
+    }
 }
