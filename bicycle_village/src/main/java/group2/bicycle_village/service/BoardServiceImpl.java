@@ -12,12 +12,6 @@ public class BoardServiceImpl implements BoardService {
 	private BoardDao boardDAO = new BoardDAOImpl();
 
 	@Override
-	public void insert(BoardDTO board) throws SQLException {
-		int result = boardDAO.insert(board);
-		if(result==0) throw new SQLException("등록되지 않았습니다");
-	}
-	
-	@Override
 	public void insert(BoardEntity board) throws SQLException {
 		int result = boardDAO.insert(board);
 		if(result==0) throw new SQLException("등록되지 않았습니다");
