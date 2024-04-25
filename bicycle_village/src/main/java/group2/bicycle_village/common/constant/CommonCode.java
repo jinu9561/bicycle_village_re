@@ -42,10 +42,10 @@ public class CommonCode {
             return value;
         }
 
-        public static BoardCategory getStatus(int value) {
-            for (BoardCategory boardCategory : BoardCategory.values()) {
-                if (boardCategory.value == value) {
-                    return boardCategory;
+        public static BoardStatus getStatus(int value) {
+            for (BoardStatus boardStatus : BoardStatus.values()) {
+                if (boardStatus.value == value) {
+                    return boardStatus;
                 }
             }
             throw new IllegalArgumentException("No matching BoardCategory for value: " + value);

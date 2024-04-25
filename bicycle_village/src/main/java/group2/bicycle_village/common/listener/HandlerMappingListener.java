@@ -49,7 +49,6 @@ public class HandlerMappingListener implements ServletContextListener {
 	
     public void contextInitialized(ServletContextEvent e)  { 
     	
-    	
     	//생성해야하는 객체들의 정보를 가지고있는 ~.properties파일을 로딩!
     	ServletContext application = e.getServletContext();
     	
@@ -65,6 +64,8 @@ public class HandlerMappingListener implements ServletContextListener {
 	    		String value = rb.getString(key);
 	    		Class<?> className = Class.forName(value);
 	    		Controller con = (Controller)className.getDeclaredConstructor().newInstance();
+	    		System.out.println("con = " + con);
+	    		System.out.println("className = " + className);
 	    		map.put(key, con);
 	    		clzMap.put(key, className);
 	    		
