@@ -6,10 +6,11 @@ import group2.bicycle_village.common.util.DbUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class AlarmDAOImpl implements AlarmDAO {
     @Override
-    public int insert(String id, AlarmDTO alarm) throws SQLException {
+    public int insertFollow(String id, AlarmDTO alarm) throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;
         int result = 0;
@@ -29,5 +30,20 @@ public class AlarmDAOImpl implements AlarmDAO {
         }
 
         return result;
+    }
+
+    @Override
+    public int insertDips(String id, AlarmDTO alarm) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public List<AlarmDTO> selectAlarm(String id) throws SQLException {
+        return List.of();
+    }
+
+    @Override
+    public int updateAlarm(String id, AlarmDTO alarm) throws SQLException {
+        return 0;
     }
 }

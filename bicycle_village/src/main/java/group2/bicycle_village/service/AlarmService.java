@@ -6,5 +6,5 @@ import group2.bicycle_village.dao.AlarmDAO;
 import java.sql.SQLException;
 
 public interface AlarmService {
-    int insert(String id, AlarmDTO alarm) throws SQLException;
+    int insertFollow(String id, AlarmDTO alarm) throws SQLException;
 }
